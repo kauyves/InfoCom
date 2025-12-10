@@ -1,0 +1,10 @@
+main {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.error {
+  color: #c0392b;
+  text-align: center;
+  margin: 2rem 0;
+}
