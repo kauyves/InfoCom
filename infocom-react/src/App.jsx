@@ -1,10 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { useState, useEffect } from "react";
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const [products, setProducts] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch(nome da API) dos produtos
+useEffect(() => {
+  fetch("https://fakestoreapi.com/products")
+    .then((res) => res.json())
+    .then(setProducts)
+    .catch(() => setError("Erro ao carregar produtos."))
+    .finally(() => setLoading(false));
+}, []);
 
   return (
     <main>
