@@ -1,5 +1,5 @@
-import './App.css'
 import { useState, useEffect } from "react";
+import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +22,7 @@ useEffect(() => {
       <h1>
         Catálogo de Produtos
       </h1>
+      {products && <ProductCard product={products[0]} />}
     </main>
   )
 }
