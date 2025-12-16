@@ -1,27 +1,31 @@
 .card {
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* Estilos existentes */
+  cursor: pointer;
 }
 
-.card img {
-  max-width: 100%;
-  height: 200px;
-  object-fit: contain;
-  margin-bottom: .5rem;
+.card:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
+/* Estilos existentes */
 
 .card h3 {
-  font-size: .8rem;
-  margin: .5rem 0;
-  text-align: center;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+  align-self: flex-start;
+  color: #636363;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .card .price {
-  color: #27ae60;
-  font-weight: bold;
+  /* Estilos existentes */
+  align-self: flex-start;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 1rem 0;
 }
