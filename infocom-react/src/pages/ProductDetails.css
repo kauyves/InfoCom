@@ -1,0 +1,55 @@
+.product-details {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  max-width: 800px;
+  gap: 1rem;
+}
+
+.product-details .card {
+  cursor: default; /* Remove o cursor pointer para o card na página de detalhes */
+}
+
+.product-details img {
+  max-width: 200px;
+  height: auto;
+}
+
+.product-details .price {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.product-details h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.product-details .product-description {
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.4;
+  margin: 0.5rem 0;
+  align-self: flex-start;
+}
+
+/* Estilo para a categoria do produto, em formato de badge */
+.product-details .product-category {
+  font-size: 0.75rem;
+  background-color: #888;
+  color: #fff;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.product-details button {
+  margin: 0;
+  width: 200px;
+}
+
+.product-details a {
+  text-decoration: none;
+}

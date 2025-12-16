@@ -18,3 +18,15 @@
   background: #bdc3c7;
   cursor: not-allowed;
 }
+
+/* Estilos existentes */
+
+.btn-secondary {
+  background-color: #fff;
+  color: #3498db;
+  border: 1px solid #3498db;
+}
+
+.btn-secondary:hover {
+  background-color: #ecf0f1;
+}
