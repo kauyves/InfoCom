@@ -4,6 +4,7 @@ import Button from './components/Button';
 import './App.css';
 import SearchBar from "./components/SearchBar";
 import { useSearch } from "./hooks/useSearch";
+import Navbar from "./components/Navbar";
 
 const ITEMS_PER_PAGE = 8;     // mostra 8 itens por vez
 
@@ -29,24 +30,27 @@ function App() {
   const { query, setQuery, filtered } = useSearch(products);
 
   return (
-    <main>
-      { /*... código existente */ }
-      {products && (
-        <>
-          <SearchBar value={query} onChange={setQuery} />
-          <ProductList products={filtered.slice(0, visibleCount)} />
+    <>
+    <Navbar />
+      <main>
+        { /*... código existente */ }
+        {products && (
+          <>
+            <SearchBar value={query} onChange={setQuery} />
+            <ProductList products={filtered.slice(0, visibleCount)} />
 
-          <Button
-            onClick={handleLoadMore}
-            disabled={visibleCount >= filtered.length}
-          >
-            {visibleCount >= filtered.length
-              ? "Fim dos produtos"
-              : "Carregar Mais"}
-          </Button>
-        </>
-      )}
-    </main>
+            <Button
+              onClick={handleLoadMore}
+              disabled={visibleCount >= filtered.length}
+            >
+              {visibleCount >= filtered.length
+                ? "Fim dos produtos"
+                : "Carregar Mais"}
+            </Button>
+          </>
+        )}
+      </main>
+    </>
   );
 }
 
