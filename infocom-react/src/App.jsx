@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import ProductList from './components/ProductList';
 import Button from './components/Button';
 import './App.css';
+import SearchBar from "./components/SearchBar";
+import { useSearch } from "./hooks/useSearch";
 
 const ITEMS_PER_PAGE = 8;     // mostra 8 itens por vez
 
@@ -24,21 +26,21 @@ function App() {
     setVisible((prev) => prev + ITEMS_PER_PAGE);
   };
   
+  const { query, setQuery, filtered } = useSearch(products);
+
   return (
     <main>
-      {loading && <p>Carregando produtos...</p>}
-
-      {error && <div className='error'>{error}</div>}
-
+      { /*... código existente */ }
       {products && (
         <>
-          <ProductList products={products.slice(0, visibleCount)} />
+          <SearchBar value={query} onChange={setQuery} />
+          <ProductList products={filtered.slice(0, visibleCount)} />
 
           <Button
             onClick={handleLoadMore}
-            disabled={visibleCount >= products.length}
+            disabled={visibleCount >= filtered.length}
           >
-            {visibleCount >= products.length
+            {visibleCount >= filtered.length
               ? "Fim dos produtos"
               : "Carregar Mais"}
           </Button>
