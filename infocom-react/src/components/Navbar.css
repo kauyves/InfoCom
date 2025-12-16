@@ -41,3 +41,27 @@ nav {
   cursor: pointer;
   color: #636363;
 }
+
+.cart-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-btn:link,
+.cart-btn:visited {
+  color: inherit;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #e74c3c;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0 6px;
+  font-size: .7rem;
+  font-weight: bold;
+}
